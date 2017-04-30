@@ -227,6 +227,7 @@
     width: 170px;
     background-color : #00e1ff;
     height:2px;
+    border: 0;
 }
 .h1-caption2{
     color: #3f4244;
@@ -344,7 +345,7 @@
 #news{
     margin-top: 100px;
     /*width: 40%;*/
-    height: 500px;
+    /*height: 500px;*/
     /*margin-left: auto;*/
     /*margin-right: auto;*/
 }
@@ -414,8 +415,8 @@
 {
     text-align: center;
 }
-.newTemp{
-    margin-top:50px;
+#main-content{
+    margin-top: 40px;
 }
 #contact-us{
     background-color:#131217;
@@ -435,18 +436,11 @@
     background-color: #131217;
     font: 300 15px Raleway;
     border-top: 0px;
-    width: 45%;
+    border-bottom: 1px solid white;
+    /*width: 45%;*/
     margin-right: 5px;
+    height:30px;
 }
-input {
-    margin-top: 5px;
-    border-radius: 20px;
-}
-
-label {
-    margin-top: 10px;
-}
-
 form .ng-valid.ng-dirty {
     background-color: lightgreen;
 }
@@ -457,4 +451,11 @@ form .ng-invalid.ng-dirty {
 .error {
     color: red;
     font-weight: bold;
+}
+form i{
+    background: linear-gradient(transparent 50%, #fff 50%);
+    position: relative;
+    display: block;
+    height: 30px;
+    width: 45%;
 }

@@ -186,7 +186,7 @@
          </div>
       </div>
       <div class="row" ng-repeat="new in newsArr" id="news-container">
-         <div  class="col-xs-2  col-md-2 "> <p class="numbers"> {{new.date}} </p> <p class="month">{{new.date}}</p></div>
+         <div  class="col-xs-2  col-md-2 "> <p class="numbers"> {{new.day}} </p> <p class="month">{{new.month}}</p></div>
          <div class="col-xs-10 col-md-10">{{new.text}}
             <p id="pButtNews">
                <a href="#/news/{{$index}}"><button id="ButtNews"> Read more</button></a>
@@ -207,21 +207,23 @@
                Ut enim ad minim veniam, quis nostrud</p>
          </div>
       </div>
-      <div class="row">
-         <div class="col-lg-offset-3 col-lg-6 ool-md-offset-3 col-md-3 col-sm-12 col-xs-12">
+         <!--<div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-3 col-sm-12 col-xs-12">-->
             <form name="contactForm" novalidate>
-               <input class='contact-input' type="text" name="userName" ng-model="userName" placeholder="Your name here" required ng-pattern="nameReg">
-               <p class="error" ng-show="myForm.userName.$invalid && myForm.userName.$dirty">
-                  {{showError(myForm.userName.$error)|| userNameErr}}</p>
-               <input class='contact-input' type="text" name="email" ng-model="email" placeholder="Your mail here" required ng-pattern="mailReg">
-               <p class="error" ng-show="myForm.email.$invalid && myForm.email.$dirty">
-                  {{showError(myForm.email.$error)|| mailErr}} </p>
-               <input class='contact-input' type="text" name="message" ng-model="message" placeholder="Your message here" required ng-pattern="messageReg">
-               <p class="error" ng-show="myForm.message.$invalid && myForm.message.$dirty">
-                  {{showError(myForm.message.$error)|| messageErr}} </p>
-               <input class="btn" type="submit" ng-disabled="myForm.$invalid">
-            </form>
-         </div>
+               <div class="row">
+               <input class='contact-input col-lg-offset-3 col-md-offset-3 col-lg-3 col-md-3 col-sm-12 col-xs-12' type="text" name="userName" ng-model="userName" placeholder="Your name here" required ng-pattern="nameReg">
+               <p class="error" ng-show="contactForm.userName.$invalid && contactForm.userName.$dirty">
+                  {{showError(contactForm.userName.$error)|| userNameErr}}</p>
+               <input class='contact-input col-lg-3 col-md-3 col-sm-12 col-xs-12' type="text" name="email" ng-model="email" placeholder="Your mail here" required ng-pattern="mailReg">
+               <p class="error" ng-show="contactForm.email.$invalid && contactForm.email.$dirty">
+                  {{showError(contactForm.email.$error)|| mailErr}} </p>
+               </div>
+      <div class="row">
+               <input class='contact-input col-lg-offset-3 col-md-offset-3 col-lg-6 col-md-6 col-sm-12 col-xs-12' type="text" name="message" ng-model="message" placeholder="Your message here" required ng-pattern="messageReg">
+               <p class="error" ng-show="contactForm.message.$invalid && contactForm.message.$dirty">
+                  {{showError(contactForm.message.$error)|| messageErr}} </p>
+               <input class="btn" type="submit" ng-disabled="contactForm.$invalid">
       </div>
+            </form>
+         <!--</div>-->
    </div>
 </div>
