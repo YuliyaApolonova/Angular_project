@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+   <meta charset="UTF-8">
+   <title>Landing page</title>
+   <link href = 'style.css' rel="stylesheet"/>
+   <link href="mediaqueries.css" rel="stylesheet" />
+   <link href="Libraries/bootstrap.css" rel="stylesheet" />
+   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+   <script src="Libraries/angular.js"></script>
+   <script src="Libraries/angular_route.js"></script>
+   <script>
+      var app = angular.module('myApp', ['ngRoute'])
+            .config(function ($routeProvider) {
+               $routeProvider
+                     .when('/', {
+                        templateUrl: 'Templates/main.html'
+                     })
+                     //передача параметров через адресную строку
+                     .when('/news/:id', {
+
+                        templateUrl: '',
+                        controller: 'newModelCtrl'
+                     })
+                     .otherwise({
+                        redirectTo: '/'
+                     })
+            })
+            //и этот нгклик делает свойство дисплей одного из блоков (а какого блока - передается в параметре функции нгклика) тру
+            .controller('servicesCtrl', function($scope){
+               $scope.services = [
+                  {name: 'web design', src: 'images/Icon_2.png', dataClick: 'web-service'},
+                  {name: 'graphic design', src: 'images/Icon_1.png', dataClick: 'graphic-service'},
+                  {name: 'programming', src: 'images/Icon_0.png', dataClick: 'programming-service'},
+                  {name: 'photography', src: 'images/Icon.png', dataClick: 'photography-service'}
+               ]
+               $scope.displayValue = 'web-service';
+               $scope.showServiceInf = function(dataClick){
+                  switch (dataClick){
+                     case 'web-service':
+                        $scope.displayValue = 'web-service';
+                        break;
+                     case 'graphic-service':
+                        $scope.displayValue = 'graphic-service';
+                        break;
+                     case 'programming-service':
+                        $scope.displayValue = 'programming-service';
+                        break;
+                     case 'photography-service':
+                        $scope.displayValue = 'photography-service';
+                        break;
+                     default:
+                        $scope.displayValue = 'web-service';
+                  }
+               }
+            })
+            .directive('aboutUs', function(){
+               return{
+                  restrict: 'E',
+                  templateUrl: 'about_us_template.html',
+                  link: function (scope, el, attr) {
+//                     console.log('scope', scope);
+//                     console.log('el', el);
+//                     console.log('attr', attr);
+                  }
+               }
+            })
+            .controller('aboutCtrl', function($scope){
+               $scope.members = [
+                  {name: 'John Doe', speciality: 'Graphic Designer', skills: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do', src: 'images/team1.jpg'},
+                  {name: 'Jenny Doe', speciality: 'Web Designer', skills: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do', src: 'images/team1.jpg'},
+                  {name: 'Jennifer Doe', speciality: 'Programmer', skills: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do', src: 'images/team1.jpg'},
+                  {name: 'Jason Doe', speciality: 'Photographer', skills: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do', src: 'images/team1.jpg'}
+               ]
+            })
+            .controller('portfolioCtrl', function($scope){
+               $scope.images = [
+                  {category: 'web', src: 'images/web.png'},
+                  {category: 'graphics', src: 'images/graphics.jpg'},
+                  {category: 'photography', src: 'images/photo.png'},
+                  {category: 'web', src: 'images/web.png'},
+                  {category: 'photography', src: 'images/photo.png'},
+                  {category: 'graphics', src: 'images/graphics.jpg'},
+                  {category: 'photography', src: 'images/photo.png'},
+                  {category: 'graphics', src: 'images/graphics.jpg'},
+                  {category: 'photography', src: 'images/photo.png'},
+                  {category: 'web', src: 'images/web.png'},
+                  {category: 'graphics', src: 'images/graphics.jpg'},
+                  {category: 'web', src: 'images/web.png'}
+               ]
+               $scope.searchValue = 'all';
+               $scope.visibleAll = true;
+               $scope.setFilter = function(category) {
+                  $scope.searchValue = category;
+                  if ($scope.searchValue == 'all') {
+                     $scope.visibleAll = true;
+                  }
+                  else {
+                     $scope.visibleAll = false;
+                  }
+               }
+               $scope.filterFunc = function (item) {
+                  if (item.category === $scope.searchValue) {
+                     return item;
+                  }
+               }
+            })
+            .controller('newsCtrl', function($scope, $route, $http){
+//               $scope.news = [
+//                  {id: '1', day: '25', month: 'September', content: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'},
+//                  {id: '2', day: '15', month: 'June', content: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua' },
+//                  {id: '3', day: '07', month: 'April', content: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'},
+//                  {id: '4', day: '04', month: 'May', content: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'}
+//               ]
+               $scope.getNews = function(){
+                  $http.get("data.json").success(function (response) {
+                     $scope.newsArr = response; //получили массив новостей, из которого можно
+                  })
+
+               }
+               $scope.getNews();
+               $scope.newId = $route.current.params.id || 0;
+               console.log('$scope.newId', $scope.newId);
+
+
+            })
+            .controller('newModelCtrl', function ($scope, $route, $http) {
+               $scope.getNews = function(){
+                  $http.get("data.json").success(function (response) {
+                     $scope.newsArr = response; //получили массив новостей, из которого можно
+                  })
+               };
+               $scope.getNews();
+
+               $scope.newId = $route.current.params.id;
+               console.log('$scope.newId', $scope.newId);
+//               $scope.newModel = $scope.newsArr[$scope.newId];
+
+            })
+
+
+   </script>
+</head>
+<body>
+<header id="header">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-md-4 col-sm-4 col-sm-4 col-xs-4">
+            <image id="header-logotype" src="images/ket.jpg"></image>
+         </div>
+         <div class="col-md-8 col-sm-8 col-sm-8 col-xs-8">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><div class="nav-content"><button class="header-link">HOME</button></div></div>
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><div class="nav-content"><button class="header-link">SERVICES</button></div></div>
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><div class="nav-content"><button class="header-link">PORTFOLIO</button></div></div>
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><div class="nav-content"><button class="header-link">ABOUT</button></div></div>
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><div class="nav-content"><button class="header-link">NEWS</button></div></div>
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><div class="nav-content"><button class="header-link">CONTACTS</button></div></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>
+
+<div ng-view >
+</div>
+
+</body>
+</html>
