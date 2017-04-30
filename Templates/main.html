@@ -104,7 +104,7 @@
          <div  id="responsive-tab2" class="col-lg-3 col-md-3 col-sm-6  col-xs-3">FOR ALL DEVICES</div>
       </div>
       <div class="row">
-         <div class="col-lg-offset-3 col-lg-3 col-md-offset-3 col-md-3 col-sm-6  col-xs-3"><img id="mobile-img" src="../images/mobile.jpg"> </div>
+         <div class="col-lg-offset-3 col-lg-3 col-md-offset-3 col-md-3 col-sm-6  col-xs-3"><img id="mobile-img" src="images/mobile.jpg"> </div>
          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
 
             <div id="responsive-description">
@@ -189,8 +189,38 @@
          <div  class="col-xs-2  col-md-2 "> <p class="numbers"> {{new.date}} </p> <p class="month">{{new.date}}</p></div>
          <div class="col-xs-10 col-md-10">{{new.text}}
             <p id="pButtNews">
-               <a href="/news/{{$index}}"><button id="ButtNews"> Read more</button></a>
+               <a href="#/news/{{$index}}"><button id="ButtNews"> Read more</button></a>
             </p>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div id="contact-us" ng-controller="contactCtrl">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6 col-sm-12 col-xs-12">
+            <h1 class="h1-caption3">Contact us</h1>
+            <hr class="header-line">
+            <p class="text3">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+               Ut enim ad minim veniam, quis nostrud</p>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-lg-offset-3 col-lg-6 ool-md-offset-3 col-md-3 col-sm-12 col-xs-12">
+            <form name="contactForm" novalidate>
+               <input class='contact-input' type="text" name="userName" ng-model="userName" placeholder="Your name here" required ng-pattern="nameReg">
+               <p class="error" ng-show="myForm.userName.$invalid && myForm.userName.$dirty">
+                  {{showError(myForm.userName.$error)|| userNameErr}}</p>
+               <input class='contact-input' type="text" name="email" ng-model="email" placeholder="Your mail here" required ng-pattern="mailReg">
+               <p class="error" ng-show="myForm.email.$invalid && myForm.email.$dirty">
+                  {{showError(myForm.email.$error)|| mailErr}} </p>
+               <input class='contact-input' type="text" name="message" ng-model="message" placeholder="Your message here" required ng-pattern="messageReg">
+               <p class="error" ng-show="myForm.message.$invalid && myForm.message.$dirty">
+                  {{showError(myForm.message.$error)|| messageErr}} </p>
+               <input class="btn" type="submit" ng-disabled="myForm.$invalid">
+            </form>
          </div>
       </div>
    </div>

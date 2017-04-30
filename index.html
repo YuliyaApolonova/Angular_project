@@ -11,6 +11,9 @@
    <script src="Libraries/angular.js"></script>
    <script src="Libraries/angular_route.js"></script>
    <script>
+//      var localStorage = JSON.parse(localStorage.getItem('AngularProject')) || {};
+//      myLocalStorage.something = ['something'];
+//      localStorage.setItem('AngularProject', JSON.stringify(myLocalStorage));
       var app = angular.module('myApp', ['ngRoute'])
             .config(function ($routeProvider) {
                $routeProvider
@@ -137,6 +140,21 @@
                console.log('$scope.newId', $scope.newId);
 //               $scope.newModel = $scope.newsArr[$scope.newId];
 
+            })
+            .controller('contactCtrl', function($scope){
+               $scope.mailErr = 'Invalid email!';
+               $scope.nameErr = 'Invalid userName!';
+               $scope.messageErr = 'So short message!';
+               $scope.mailReg = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]+$/;
+               $scope.nameReg = /^[a-zA-Z]+$/;
+               $scope.messageReg = /^.{20,}$/;
+               $scope.showError = function(err){
+                  if (angular.isDefined(err)) {
+                     if (err.required) {
+                        return 'no data entered!'
+                     }
+                  }
+               }
             })
 
 

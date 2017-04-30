@@ -414,3 +414,47 @@
 {
     text-align: center;
 }
+.newTemp{
+    margin-top:50px;
+}
+#contact-us{
+    background-color:#131217;
+}
+.h1-caption3{
+    color: white;
+    font: 400 40px Raleway;
+    text-align:center;
+}
+.text3{
+    color: white;
+    font: 300 15px Raleway;
+    text-align:center;
+}
+.contact-input{
+    color: white;
+    background-color: #131217;
+    font: 300 15px Raleway;
+    border-top: 0px;
+    width: 45%;
+    margin-right: 5px;
+}
+input {
+    margin-top: 5px;
+    border-radius: 20px;
+}
+
+label {
+    margin-top: 10px;
+}
+
+form .ng-valid.ng-dirty {
+    background-color: lightgreen;
+}
+
+form .ng-invalid.ng-dirty {
+    background-color: lightcoral;
+}
+.error {
+    color: red;
+    font-weight: bold;
+}
