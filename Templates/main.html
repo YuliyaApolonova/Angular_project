@@ -1,7 +1,7 @@
-<div id="home-page">
+<div id="home-page" ng-controller="homeCtrl">
    <div id="home-content">
       <p class="home-text"> WE MAKE WEBSITES </p>
-      <p class="home-text"> <button id="buttonWeb"> <p id="startTour"> START TOUR </p> </button> </p>
+      <p class="home-text"> <button id="buttonWeb" ng-click="show('portfolio')"> <p id="startTour"> START TOUR </p> </button> </p>
    </div>
 </div>
 
@@ -97,7 +97,7 @@
    </div>
 </div>
 
-<div id="responsive">
+<div id="responsive" ng-controller="responsiveCtrl">
    <div class="container-fluid">
       <div class="row">
          <div id="responsive-tab1" class="col-lg-offset-3 col-lg-3 col-md-offset-3 col-md-3 col-sm-6 col-xs-6">START TOUR</div>
@@ -114,7 +114,7 @@
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </p>
-               <button id="getNow-butt">GET NOW </button>
+               <button id="getNow-butt" ng-click="show('contact-us')">GET NOW </button>
             </div>
 
          </div>
@@ -142,14 +142,19 @@
       </div>
       <div class="row" >
          <div ng-if="visibleAll">
-            <div ng-repeat='image in images' class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+            <div ng-repeat='image in images' class="col-lg-2 col-md-2 col-sm-3 col-xs-6 portfolio-row">
                <img class="portfolio-img" src="{{image.src}}">
+               <div class="portfolio-hover-img">
+                  {{image.category}}
+               </div>
             </div>
          </div>
 
-         <div ng-repeat='image in images |filter:filterFunc' class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+         <div ng-repeat='image in images |filter:filterFunc' class="col-lg-2 col-md-2 col-sm-3 col-xs-6 portfolio-row">
             <img class="portfolio-img" src="{{image.src}}">
-
+            <div class="portfolio-hover-img">
+               {{image.category}}
+            </div>
          </div>
       </div>
    </div>
@@ -187,9 +192,9 @@
       </div>
       <div class="row" ng-repeat="new in newsArr" id="news-container">
          <div  class="col-xs-2  col-md-2 "> <p class="numbers"> {{new.day}} </p> <p class="month">{{new.month}}</p></div>
-         <div class="col-xs-10 col-md-10">{{new.text}}
-            <p id="pButtNews">
-               <a href="#/news/{{$index}}"><button id="ButtNews"> Read more</button></a>
+         <div class="col-xs-10 col-md-10"><p class="text4">{{new.text.substring(0,100)}}</p>
+            <p id="news-btn-text">
+               <a href="#/news/{{$index}}"><button id="news-btn"> Read more</button></a>
             </p>
          </div>
       </div>
@@ -207,23 +212,46 @@
                Ut enim ad minim veniam, quis nostrud</p>
          </div>
       </div>
-         <!--<div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-3 col-sm-12 col-xs-12">-->
-            <form name="contactForm" novalidate>
+            <form name="contactForm" novalidate action="#" method="post">
                <div class="row">
                <input class='contact-input col-lg-offset-3 col-md-offset-3 col-lg-3 col-md-3 col-sm-12 col-xs-12' type="text" name="userName" ng-model="userName" placeholder="Your name here" required ng-pattern="nameReg">
-               <p class="error" ng-show="contactForm.userName.$invalid && contactForm.userName.$dirty">
-                  {{showError(contactForm.userName.$error)|| userNameErr}}</p>
+
                <input class='contact-input col-lg-3 col-md-3 col-sm-12 col-xs-12' type="text" name="email" ng-model="email" placeholder="Your mail here" required ng-pattern="mailReg">
-               <p class="error" ng-show="contactForm.email.$invalid && contactForm.email.$dirty">
-                  {{showError(contactForm.email.$error)|| mailErr}} </p>
+
+               </div>
+               <div class="row">
+                  <div class="col-lg-offset-3 col-md-offset-3 col-lg-3 col-md-3 col-xs-12 col-md-12">
+                     <p class="error" ng-show="contactForm.userName.$invalid && contactForm.userName.$dirty">
+                        {{showError(contactForm.userName.$error)|| userNameErr}}</p>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                     <p class="error" ng-show="contactForm.email.$invalid && contactForm.email.$dirty">
+                        {{showError(contactForm.email.$error)|| mailErr}} </p>
+                  </div>
                </div>
       <div class="row">
                <input class='contact-input col-lg-offset-3 col-md-offset-3 col-lg-6 col-md-6 col-sm-12 col-xs-12' type="text" name="message" ng-model="message" placeholder="Your message here" required ng-pattern="messageReg">
-               <p class="error" ng-show="contactForm.message.$invalid && contactForm.message.$dirty">
-                  {{showError(contactForm.message.$error)|| messageErr}} </p>
-               <input class="btn" type="submit" ng-disabled="contactForm.$invalid">
+
       </div>
+               <div class="row">
+                  <div class="col-lg-offset-3 col-md-offset-3 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                     <p class="error" ng-show="contactForm.message.$invalid && contactForm.message.$dirty">
+                        {{showError(contactForm.message.$error)|| messageErr}} </p>
+                  </div>
+               </div>
+               <div class="row">
+                  <input class="btn col-lg-offset-7 col-md-offset-7 col-lg-2 col-md-2 col-sm-offset-8 col-xs-offset-6 col-sm-6 col-sm-6 ol-xs-6 submit-btn" type="submit" value='Send message' ng-disabled="contactForm.$invalid">
+               </div>
             </form>
-         <!--</div>-->
+
+   </div>
+</div>
+
+
+<div id="footer-1">
+   <div id="footer-content">
+      <p class="footer-text"> Awesome address </p>
+      <p class="footer-text"> Lorem ipsum dolor sit amet</p>
+      <p class="footer-text"> Lorem ipsum dolor sit amet</p>
    </div>
 </div>

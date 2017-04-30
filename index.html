@@ -11,9 +11,12 @@
    <script src="Libraries/angular.js"></script>
    <script src="Libraries/angular_route.js"></script>
    <script src="main.js"></script>
+   <script src="js/angular-smooth-scroll.js"></script>
+   <script src="js/count-to.js"></script>
 </head>
 <body>
-<header id="header">
+<div class="wrapper">
+<header id="header" ng-controller="headerCtrl">
    <div class="container-fluid">
       <div class="row">
          <div class="col-md-4 col-sm-4 col-sm-4 col-xs-4">
@@ -22,12 +25,12 @@
          <div class="col-md-8 col-sm-8 col-sm-8 col-xs-8">
             <div class="container-fluid">
                <div class="row">
-                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><div class="nav-content"><button class="header-link">HOME</button></div></div>
-                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><div class="nav-content"><button class="header-link">SERVICES</button></div></div>
-                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><div class="nav-content"><button class="header-link">PORTFOLIO</button></div></div>
-                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><div class="nav-content"><button class="header-link">ABOUT</button></div></div>
-                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><div class="nav-content"><button class="header-link">NEWS</button></div></div>
-                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><div class="nav-content"><button class="header-link">CONTACTS</button></div></div>
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><div class="nav-content"><button class="header-link" ng-click="show('home-page')">HOME</button></div></div>
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><div class="nav-content"><button class="header-link" ng-click="show('services')">SERVICES</button></div></div>
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><div class="nav-content"><button class="header-link" ng-click="show('portfolio')">PORTFOLIO</button></div></div>
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><div class="nav-content"><button class="header-link" ng-click="show('about-us')">ABOUT</button></div></div>
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><div class="nav-content"><button class="header-link" ng-click="show('news')">NEWS</button></div></div>
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><div class="nav-content"><button class="header-link" ng-click="show('contact-us')">CONTACTS</button></div></div>
                </div>
             </div>
          </div>
@@ -37,6 +40,13 @@
 
 <div ng-view id="main-content">
 </div>
+<div id="footer-2" ng-controller="footerCtrl">
+   <div id="Copyright">
 
+      <button id="buttFoot" ng-click="show('home-page')"> <i class="fa fa-angle-up" aria-hidden="true"></i> </button>
+      &#169 2014 - Kat all right reserved
+   </div>
+</div>
+</div>
 </body>
 </html>

@@ -259,10 +259,32 @@
         cursor: pointer;
     }
 }
+.portfolio-row{
+    position: relative;
+}
 .portfolio-img{
     width : 100%;
     height : auto;
 }
+.portfolio-hover-img{
+    width: 87%;
+    height:100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    background-color: yellow;
+}
+.portfolio-hover-img:hover{
+    width: 87%;
+    height:100%;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    background-color: yellow;
+    margin: auto;
+    }
 #portfolio-categories{
     margin-bottom: 30px;
     margin-top: 30px;
@@ -344,10 +366,6 @@
 
 #news{
     margin-top: 100px;
-    /*width: 40%;*/
-    /*height: 500px;*/
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
 }
 #news-container{
     width: 40%;
@@ -359,39 +377,19 @@
         width:100%;
     }
 }
-#hNews
-{
-    color: #3f4244;
-    font: 400 40px Raleway;
-    text-align: center;
-}
-#pNews
-{
-    color: #929ba0;
-    font: 300 15px Raleway;
-    text-align: center;
-}
-#hrNews
-{
-    color: #00BFFF;
-    width: 20%;
-    align: center;
-    size: 2;
-    border: none;
-    height: 4px;
-}
 
-#blockNews
-{
-    margin-top: 50px;
-}
-#pButtNews
+#news-btn-text
 {
 
     text-align: right;
     font: 300 15px Raleway;
 }
-#ButtNews
+.text4{
+    color: #929ba0;
+    font: 300 15px Raleway;
+    text-align:left;
+}
+#news-btn
 {
     border-left: none;
     border-right: none;
@@ -420,6 +418,7 @@
 }
 #contact-us{
     background-color:#131217;
+    height:500px;
 }
 .h1-caption3{
     color: white;
@@ -440,6 +439,7 @@
     /*width: 45%;*/
     margin-right: 5px;
     height:30px;
+    margin-top: 30px;
 }
 form .ng-valid.ng-dirty {
     background-color: lightgreen;
@@ -458,4 +458,70 @@ form i{
     display: block;
     height: 30px;
     width: 45%;
+}
+.submit-btn{
+    background-color: #131217;
+    color: white;
+}
+
+#footer-1
+{
+    width: 100%;
+    height: 400px;
+    background-color: #252726;
+    line-height: 400px;
+}
+#footer-content
+{   height: 162px;
+    width: 19.2%;
+    background-color: #00e1ff;
+    margin:auto;
+    display:inline-block;
+    margin-top: 130px;
+    margin-left:40%;
+}
+#mobileImg
+{
+    height:100%;
+    width:100%;
+}
+.footer-text
+{
+    color: #ffffff;
+    font: 500 15px Raleway;
+    text-align: center;
+    margin-top: 25px;
+}
+#footer-2
+{ width: 100%;
+    height: 112px;
+    background-color: #131217;
+
+}
+#buttFoot
+{
+    margin-top: 35px;
+    width: 10%;
+    height: 40px;
+    background-color: #131217;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+/*.pFoot*/
+/*{*/
+    /*color: white;*/
+    /*text-align:center;*/
+    /*font: 500 30px Raleway;*/
+/*}*/
+#Copyright
+{
+    color: #ffffff;
+    font: 500 18px Raleway;
+    height: 30px;
+    width: 30%;
+    margin: auto;
+}
+#footer2 i{
+    color: white;
 }

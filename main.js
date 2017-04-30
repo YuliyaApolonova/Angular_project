@@ -3,7 +3,7 @@
  */
 
 var myLocalStorage = JSON.parse(localStorage.getItem('AngularProject')) || {};
-var app = angular.module('myApp', ['ngRoute'])
+var app = angular.module('myApp', ['ngRoute', 'smoothScroll', 'countTo'])
             .config(function ($routeProvider) {
                $routeProvider
                      .when('/', {
@@ -20,6 +20,16 @@ var app = angular.module('myApp', ['ngRoute'])
                      })
             })
 
+            .controller('homeCtrl', function($scope,smoothScroll){
+               $scope.show = function (id) {
+                  var element = document.getElementById(id);
+                  var options = {
+                     offset: 70
+                  }
+                  smoothScroll(element, options);
+               }
+
+            })
             .controller('servicesCtrl', function($scope){
                $scope.services = [
                   {name: 'web design', src: 'images/Icon_2.png', dataClick: 'web-service'},
@@ -45,6 +55,15 @@ var app = angular.module('myApp', ['ngRoute'])
                      default:
                         $scope.displayValue = 'web-service';
                   }
+               }
+            })
+            .controller('responsiveCtrl', function($scope, smoothScroll){
+               $scope.show = function (id) {
+                  var element = document.getElementById(id);
+                  var options = {
+                     offset: 70
+                  }
+                  smoothScroll(element, options);
                }
             })
             .directive('aboutUs', function(){
@@ -170,5 +189,23 @@ var app = angular.module('myApp', ['ngRoute'])
                   }
                }
             })
+      .controller('headerCtrl', function($scope, smoothScroll){
+         $scope.show = function (id) {
+            var element = document.getElementById(id);
+            var options = {
+               offset: 70
+            }
+            smoothScroll(element, options);
+         }
 
+      })
+      .controller('footerCtrl', function($scope, smoothScroll){
+         $scope.show = function (id) {
+            var element = document.getElementById(id);
+            var options = {
+               offset: 70
+            }
+            smoothScroll(element, options);
+         }
 
+      })
