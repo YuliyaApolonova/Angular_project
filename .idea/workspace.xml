@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65d0db89-715a-4276-98c7-adfc93c376de" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/angular-countUp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/angular-scroll-spy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/countUp.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Templates/main.html" afterPath="$PROJECT_DIR$/Templates/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Libraries/angular_route.js" afterPath="$PROJECT_DIR$/js/angular_route.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/about_us_template.html" afterPath="$PROJECT_DIR$/Templates/about_us_template.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -49,21 +41,9 @@
       <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Templates/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
+            <state relative-caret-position="510">
               <caret line="189" column="78" lean-forward="false" selection-start-line="189" selection-start-column="78" selection-end-line="189" selection-end-column="78" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="angular-scroll-spy.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/angular-scroll-spy.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="19" column="48" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="48" />
-              <folding>
-                <element signature="e#0#41#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -78,7 +58,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
@@ -91,7 +71,7 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
+            <state relative-caret-position="500">
               <caret line="239" column="14" lean-forward="true" selection-start-line="212" selection-start-column="12" selection-end-line="239" selection-end-column="14" />
               <folding>
                 <element signature="e#0#41#0" expanded="false" />
@@ -100,33 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="countUp.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/countUp.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="209" column="26" lean-forward="true" selection-start-line="209" selection-start-column="26" selection-end-line="209" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="angular-countUp.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/angular-countUp.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="138" column="0" lean-forward="true" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
-              <folding>
-                <element signature="e#4591#4632#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-76">
-              <caret line="509" column="1" lean-forward="false" selection-start-line="509" selection-start-column="1" selection-end-line="509" selection-end-column="1" />
+            <state relative-caret-position="186">
+              <caret line="353" column="1" lean-forward="false" selection-start-line="353" selection-start-column="1" selection-end-line="353" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -161,7 +119,6 @@
         <option value="$PROJECT_DIR$/main.html" />
         <option value="$PROJECT_DIR$/Templates/new_template.html" />
         <option value="$PROJECT_DIR$/js/count-to.js" />
-        <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/js/numbers.js" />
         <option value="$PROJECT_DIR$/js/angular-scroll-spy.js" />
         <option value="$PROJECT_DIR$/js/countUp.js" />
@@ -169,6 +126,7 @@
         <option value="$PROJECT_DIR$/Templates/main.html" />
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/style.css" />
       </list>
     </option>
   </component>
@@ -359,17 +317,18 @@
       <option name="presentableId" value="Default" />
       <updated>1493208086104</updated>
       <workItem from="1493208091034" duration="22644000" />
-      <workItem from="1493393643312" duration="67937000" />
+      <workItem from="1493393643312" duration="68763000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90581000" />
+    <option name="totallyTimeSpent" value="91407000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="1" width="1364" height="726" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25339368" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25339368" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -464,14 +423,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/about_us_template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="55" lean-forward="false" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -484,14 +435,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="48" lean-forward="false" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-76">
-          <caret line="509" column="1" lean-forward="false" selection-start-line="509" selection-start-column="1" selection-end-line="509" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -584,14 +527,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="189" column="78" lean-forward="false" selection-start-line="189" selection-start-column="78" selection-end-line="189" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/countUp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -602,7 +537,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
+        <state relative-caret-position="500">
           <caret line="239" column="14" lean-forward="true" selection-start-line="212" selection-start-column="12" selection-end-line="239" selection-end-column="14" />
           <folding>
             <element signature="e#0#41#0" expanded="false" />
@@ -614,6 +549,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="189" column="78" lean-forward="false" selection-start-line="189" selection-start-column="78" selection-end-line="189" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/about_us_template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="55" lean-forward="false" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="353" column="1" lean-forward="false" selection-start-line="353" selection-start-column="1" selection-end-line="353" selection-end-column="1" />
           <folding />
         </state>
       </provider>

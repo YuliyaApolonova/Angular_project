@@ -350,18 +350,19 @@
 }
 .network1:hover{
     background-color: #2d6ca2;
-}
-.network1:hover i, .network2:hover i, network3:hover i, network4:hover i{
     color: white;
 }
 .network2:hover{
     background-color: #18cfab;
+    color: white;
 }
 .network3:hover{
     background-color: red;
+    color: white;
 }
 .network4:hover{
     background-color: hotpink;
+    color: white;
 }
 
 #news{
