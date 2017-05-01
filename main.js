@@ -3,16 +3,16 @@
  */
 
 var myLocalStorage = JSON.parse(localStorage.getItem('AngularProject')) || {};
-var app = angular.module('myApp', ['ngRoute', 'smoothScroll', 'countTo'])
+var app = angular.module('myApp', ['ngRoute', 'smoothScroll', 'scrollSpyModule', 'countUpModule'])
             .config(function ($routeProvider) {
                $routeProvider
                      .when('/', {
-                        templateUrl: 'Templates/main.html'
+                        templateUrl: './Templates/main.html'
                      })
                      //передача параметров через адресную строку
                      .when('/news/:id', {
 
-                        templateUrl: 'Templates/new_template.html',
+                        templateUrl: './Templates/new_template.html',
                         controller: 'newModelCtrl'
                      })
                      .otherwise({
@@ -69,7 +69,7 @@ var app = angular.module('myApp', ['ngRoute', 'smoothScroll', 'countTo'])
             .directive('aboutUs', function(){
                return{
                   restrict: 'E',
-                  templateUrl: 'about_us_template.html',
+                  templateUrl: './Templates/about_us_template.html',
                   link: function (scope, el, attr) {
 //                     console.log('scope', scope);
 //                     console.log('el', el);
@@ -207,5 +207,36 @@ var app = angular.module('myApp', ['ngRoute', 'smoothScroll', 'countTo'])
             }
             smoothScroll(element, options);
          }
+
+      })
+      .controller('CounterCtrl', function ($scope, $document) {
+//          window.odometerOptions = {
+//             auto: false, // Don't automatically initialize everything with class 'odometer'
+//             selector: '.counter-number', // Change the selector used to automatically find things to be animated
+//             format: '(ddd).dd', // Change how digit groups are formatted, and how many digits are shown after the decimal point
+//             duration: 3000, // Change how long the javascript expects the CSS animation to take
+//             theme: 'default', // Specify the theme (if you have more than one theme css file on the page)
+//             animation: 'count' // Count is a simpler animation method which just increments the value,
+// // use it when you're looking for something more subtle.
+//          };
+//          $scope.counters = [
+//             {
+//                icon: 'briefcase',
+//                value: 3054,
+//                text: 'Completed Projects'
+//             },{
+//                icon: 'mouse-pointer',
+//                value: 7234873,
+//                text: 'Click Pressed'
+//             },{
+//                icon: 'envelope-o',
+//                value: 4670,
+//                text: 'Mails Sented & Received'
+//             },{
+//                icon: 'commenting',
+//                value: 939,
+//                text: 'Jokes Tolds'
+//             }
+//          ];
 
       })

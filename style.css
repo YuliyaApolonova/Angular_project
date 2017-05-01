@@ -508,12 +508,6 @@ form i{
     border-radius: 50%;
     margin-right: 20px;
 }
-/*.pFoot*/
-/*{*/
-    /*color: white;*/
-    /*text-align:center;*/
-    /*font: 500 30px Raleway;*/
-/*}*/
 #Copyright
 {
     color: #ffffff;
@@ -524,4 +518,32 @@ form i{
 }
 #footer2 i{
     color: white;
+}
+#counters {
+    position: relative;
+    background-color: #131217;
+}
+
+#counters .icon-container {
+    text-align: center;
+    padding: 20px;
+}
+
+#counters .icon-container span {
+    text-align: center;
+    color: #02D0ED;
+    background-color: transparent;
+    font-size: 35px;
+}
+
+#counters .counter-number {
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+#counters .text {
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
 }

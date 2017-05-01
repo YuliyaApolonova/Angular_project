@@ -179,6 +179,42 @@
    </div>
 </div>
 
+<div id="counters" ng-controller="CounterCtrl">//работает по клику
+<!--<div id="counters">-->
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 counter-container">
+            <div class="icon-container">
+               <span><i class="fa fa-briefcase" aria-hidden="true"></i></span>
+            </div>
+            <h1 class="counter-number" count-up scroll-spy-event="elementFirstScrolledIntoView" scroll-spy id="animation1" start-val="0" end-val="3000" duration="3" options="{separator:' '}">3000</h1>
+            <div class="text">Completed Projects</div>
+         </div>
+         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 counter-container">
+            <div class="icon-container">
+               <span><i class="fa fa-mouse-pointer" aria-hidden="true"></i></span>
+            </div>
+            <h1 class="counter-number" count-up id="animation2" start-val="0" end-val="7234873" duration="3" options="{separator:' '}" scroll-spy-event="elementScrolledIntoView" scroll-spy >1234873</h1>
+            <div class="text">Click Pressed</div>
+         </div>
+         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 counter-container">
+            <div class="icon-container">
+               <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+            </div>
+            <h1 class="counter-number" count-up scroll-spy-event="elementScrolledIntoView" scroll-spy id="animation3" start-val="0" end-val="4670" duration="3" options="{separator:' '}"></h1>
+            <div class="text">Mails Sented & Received</div>
+         </div>
+         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 counter-container">
+            <div class="icon-container">
+               <span><i class="fa fa-commenting" aria-hidden="true"></i></span>
+            </div>
+            <h1 class="counter-number" count-up scroll-spy-event="elementScrolledIntoView" scroll-spy id="animation4" start-val="0" end-val="939" duration="3" options="{separator:' '}"></h1>
+            <div class="text">Jokes Tolds</div>
+         </div>
+      </div>
+   </div>
+</div>
+
 <div id="news" ng-controller="newsCtrl">
    <div class="container-fluid">
       <div class="row">
