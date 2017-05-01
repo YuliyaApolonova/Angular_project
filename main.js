@@ -87,18 +87,18 @@ var app = angular.module('myApp', ['ngRoute', 'smoothScroll', 'countTo'])
             })
             .controller('portfolioCtrl', function($scope){
                $scope.images = [
-                  {category: 'web', src: 'images/web.png'},
+                  {category: 'web', src: 'images/WEB.png'},
                   {category: 'graphics', src: 'images/graphics.jpg'},
                   {category: 'photography', src: 'images/photo.png'},
-                  {category: 'web', src: 'images/web.png'},
-                  {category: 'photography', src: 'images/photo.png'},
-                  {category: 'graphics', src: 'images/graphics.jpg'},
+                  {category: 'web', src: 'images/WEB.png'},
                   {category: 'photography', src: 'images/photo.png'},
                   {category: 'graphics', src: 'images/graphics.jpg'},
                   {category: 'photography', src: 'images/photo.png'},
-                  {category: 'web', src: 'images/web.png'},
                   {category: 'graphics', src: 'images/graphics.jpg'},
-                  {category: 'web', src: 'images/web.png'}
+                  {category: 'photography', src: 'images/photo.png'},
+                  {category: 'web', src: 'images/WEB.png'},
+                  {category: 'graphics', src: 'images/graphics.jpg'},
+                  {category: 'web', src: 'images/WEB.png'}
                ]
                $scope.searchValue = 'all';
                $scope.visibleAll = true;
