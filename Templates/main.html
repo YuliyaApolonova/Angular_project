@@ -227,8 +227,8 @@
          </div>
       </div>
       <div class="row" ng-repeat="new in newsArr" id="news-container">
-         <div  class="col-xs-2  col-md-2 "> <p class="numbers"> {{new.day}} </p> <p class="month">{{new.month}}</p></div>
-         <div class="col-xs-10 col-md-10"><p class="text4">{{new.text.substring(0,100)}}</p>
+         <div class="col-xs-3  col-md-2 "> <p class="numbers"> {{new.day}} </p> <p class="month">{{new.month}}</p></div>
+         <div class="col-xs-9 col-md-10"><p class="text4">{{new.text.substring(0,100)}}</p>
             <p id="news-btn-text">
                <a href="#/news/{{$index}}"><button id="news-btn"> Read more</button></a>
             </p>
