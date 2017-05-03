@@ -5,7 +5,7 @@
    </div>
 </div>
 
-<div id="services" ng-controller="servicesCtrl">
+<div id="services" ng-controller="servicesCtrl" class="hidden-xs">
    <div class="container-fluid">
       <div class="row">
          <div class="col-lg-2 col-md-2"></div>
@@ -17,7 +17,7 @@
          </div>
       </div>
 
-      <div id='service-feature-container' class="row" ng-switch on="displayValue">
+      <div id='service-feature-container' class="row hidden-xs" ng-switch on="displayValue">
          <div ng-switch-when="web-service">
             <div class="col-lg-1 col-lg-offset-2 col-md-1 col-md-offset-2 col-sm-1 col-xs-1" id="service-feature-1-1"></div>
             <div class="col-lg-1 col-md-1 col-xs-2 col-sm-2" id="service-feature-1-2"></div>
@@ -101,7 +101,7 @@
    <div class="container-fluid">
       <div class="row">
          <div id="responsive-tab1" class="col-lg-offset-3 col-lg-3 col-md-offset-3 col-md-3 col-sm-6 col-xs-6">START TOUR</div>
-         <div  id="responsive-tab2" class="col-lg-3 col-md-3 col-sm-6  col-xs-3">FOR ALL DEVICES</div>
+         <div  id="responsive-tab2" class="col-lg-3 col-md-3 col-sm-6  col-xs-6">FOR ALL DEVICES</div>
       </div>
       <div class="row">
          <div class="col-lg-offset-3 col-lg-3 col-md-offset-3 col-md-3 col-sm-6  col-xs-3"><img id="mobile-img" src="images/mobile.jpg"> </div>
@@ -135,10 +135,10 @@
          </div>
       </div>
       <div class="row" id="portfolio-categories">
-         <div class="col-lg-offset-4 col-lg-1 col-md-offset-4 col-md-1 col-sm-3 col-xs-2 category-caption" ng-click="setFilter('all')">ALL</div>
-         <div class="col-lg-1 col-md-1 col-sm-3 col-xs-2 category-caption" ng-click="setFilter('web')">WEB</div>
-         <div class="col-lg-1 col-md-1 col-sm-3 col-xs-2 category-caption" ng-click="setFilter('photography')">PHOTOGRAPHY</div>
-         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-2 category-caption" ng-click="setFilter('graphics')">GRAPHIC DESIGN</div>
+         <div class="col-lg-offset-4 col-lg-1 col-md-offset-4 col-md-1 col-sm-3 col-xs-3 category-caption" ng-click="setFilter('all')">ALL</div>
+         <div class="col-lg-1 col-md-1 col-sm-3 col-xs-3 category-caption" ng-click="setFilter('web')">WEB</div>
+         <div class="col-lg-1 col-md-1 col-sm-3 col-xs-3 category-caption" ng-click="setFilter('photography')">PHOTOGRAPHY</div>
+         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 category-caption" ng-click="setFilter('graphics')">GRAPHIC DESIGN</div>
       </div>
       <div class="row" >
          <div ng-if="visibleAll">
@@ -284,7 +284,7 @@
 </div>
 
 
-<div id="footer-1">
+<div id="footer-1" class="hidden-xs">
    <div id="footer-content">
       <p class="footer-text"> Awesome address </p>
       <p class="footer-text"> Lorem ipsum dolor sit amet</p>
