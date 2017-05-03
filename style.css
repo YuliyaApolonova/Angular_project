@@ -59,6 +59,9 @@
         height: 38px;
         font-size:5px;
     }
+    .header-link:active, header-link:visited, header-link:hover{
+        font-size:5px;
+    }
 
 }
 
@@ -324,9 +327,10 @@
     background-color: yellow;
     margin: auto;
     }
-@media(max-width:321px){}
-.portfolio-hover-img:hover{
-    width:82%;
+@media(max-width:321px) {
+    .portfolio-hover-img:hover {
+        width: 82%;
+    }
 }
 #portfolio-categories{
     margin-bottom: 30px;
